@@ -53,13 +53,13 @@
                //$('#SoccerPlayerList').empty();
                $.each(result.rows, function (index,row) {
                    alert(result);
-                   var row = result.rows.item(index);
-                   alert(row);
-                   $('#SoccerPlayerList').append(row['Name']);
-                   $('#SPl').append(row['Club']);
+                   var row1 = result.rows.item(index);
+                   alert(row1);
+                   $('#SoccerPlayerList').append(row1['Name']);
+                   $('#SPl').append(row1['Club']);
                });
 
-               $('#SoccerPlayerList').listview();
+               //$('#SoccerPlayerList').listview();
            }
        </script>
     </head>

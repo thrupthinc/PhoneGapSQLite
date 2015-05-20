@@ -48,16 +48,11 @@
            }
 
            function querySuccess(tx, result) {
-               alert("result" + result);
-               alert(result.rows);
-               //$('#SoccerPlayerList').empty();
-               $.each(result.rows, function (index) {
-                   alert(result);
-                   var row1 = result.rows.item(index);
-                   alert(row);
-                   $('#SoccerPlayerList').append(row['Name']);
-                   $('#SPl').append(row['Club']);
-               });
+               var len = result.rows.length;
+               for (var i=0; i<len; i++){
+                   var row = result.rows.item(i);
+                   $('#SoccerPlayerList').append(''+row['Name']+'Club '+row['Club']+'');
+                   }
 
                //$('#SoccerPlayerList').listview();
            }

@@ -6,7 +6,7 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.0rc2.min.css" />
          <title>Hello World</title>
         <script type="text/javascript" src="cordova.js"></script>
@@ -38,11 +38,13 @@
            function successCB() {
                alert("success!");
                db.transaction(queryDB, errorCB);
+               alert("inside SuccessCB");
            }
 
            //select all from SoccerPlayer
            function queryDB(tx) {
                tx.executeSql('SELECT * FROM SoccerPlayer', [], querySuccess, errorCB);
+               alert("inside queryDB");
            }
 
            function querySuccess(tx, result) {

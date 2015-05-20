@@ -51,12 +51,12 @@
                alert("result" + result);
                alert(result.rows);
                //$('#SoccerPlayerList').empty();
-               $.each(result.rows, function (index,row) {
+               $.each(result.rows, function (index) {
                    alert(result);
                    var row1 = result.rows.item(index);
-                   alert(row1);
-                   $('#SoccerPlayerList').append(row1['Name']);
-                   $('#SPl').append(row1['Club']);
+                   alert(row);
+                   $('#SoccerPlayerList').append(row['Name']);
+                   $('#SPl').append(row['Club']);
                });
 
                //$('#SoccerPlayerList').listview();

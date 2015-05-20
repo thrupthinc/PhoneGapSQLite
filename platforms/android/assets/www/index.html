@@ -49,7 +49,8 @@
 
            function querySuccess(tx, result) {
                alert("result" + result);
-               $('#SoccerPlayerList').empty();
+               alert(result.rows);
+               //$('#SoccerPlayerList').empty();
                $.each(result.rows, function (index) {
                    alert(result);
                    var row = result.rows.item(index);

@@ -47,14 +47,17 @@
                alert("inside queryDB");
            }
 
-           function querySuccess(tx, result) {
-               var len = result.rows.length;
-               for (var i=0; i<len; i++){
-                   var row = result.rows.item(i);
-                   $('#SoccerPlayerList').append(''+row['Name']+'Club '+row['Club']+'');
-                   }
-
-               //$('#SoccerPlayerList').listview();
+           function querySuccess(tx, results) {
+               //var len = result.rows.length;
+               //for (var i=0; i<len; i++){
+               //    var row = result.rows.item(i);
+               //    $('#SoccerPlayerList').append(''+row['Name']+'Club '+row['Club']+'');
+               //    }
+               var len = results.rows.length;
+               console.log("DEMO table: " + len + " rows found.");
+               for (var i = 0; i < len; i++) {
+                   console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).Name + " Club =  " + results.rows.item(i).Club);
+               }
            }
        </script>
     </head>
